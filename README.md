@@ -1,11 +1,28 @@
-# Intro to Machine Learning - TensorFlow Project
+Image Classifier (TensorFlow/Keras)
 
-Project code for Udacity's Intro to Machine Learning with TensorFlow Nanodegree program. In this project, you will first develop code for an image classifier built with TensorFlow, then you will convert it into a command line application.
+A TensorFlow/Keras image classifier built on MobileNetV2 and trained on the Oxford Flowers 102 dataset, with a command-line prediction tool.
 
-In order to complete this project, you will need to use the GPU enabled workspaces within the classroom.  The files are all available here for your convenience, but running on your local CPU will likely not work well.
+Overview
 
-You should also only enable the GPU when you need it. If you are not using the GPU, please disable it so you do not run out of time!
+An image classification project built with TensorFlow/Keras, using a MobileNetV2-based model trained on the Oxford Flowers 102 dataset to classify flower species from images. Built as the capstone project of a Udacity AI Programming with Python nanodegree.
 
-### Data
+Features
+Image preprocessing pipeline (resizing, normalization) for feeding images into the model
+Transfer learning on top of a pretrained MobileNetV2 backbone
+Model training and evaluation workflow
+predict.py — a command-line script that takes an image path and returns the predicted flower class (with confidence)
+Tech
 
-The data for this project is quite large - in fact, it is so large you cannot upload it onto Github.  If you would like the data for this project, you will want download it from the workspace in the classroom.  Though actually completing the project is likely not possible on your local unless you have a GPU.  You will be training using 102 different types of flowers, where there ~20 images per flower to train on.  Then you will use your trained classifier to see if you can predict the type for new images of the flowers.
+Python, TensorFlow, Keras, MobileNetV2, NumPy.
+
+Usage
+bash
+python predict.py /path/to/image.jpg --top_k 3
+
+(Adjust flags to match your actual predict.py argument names once uploaded.)
+
+Context
+
+Final project for the Udacity "AI Programming with Python" Nanodegree.
+
+Note: if you'd rather present this repo as a different classification task (e.g. a separate dog-detection project), let me know and I'll rewrite this to match the actual code you upload.
